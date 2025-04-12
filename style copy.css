@@ -1,0 +1,618 @@
+.main {
+    width: 100%;
+    height: 150vh;
+    
+    background-image: url('website-background-a6wbhti5rhqieecp.jpg'); 
+    background-size: cover;
+    background-position: center;
+    animation: slide 12s infinite;
+}
+#home {
+    display: block; /* initially shown */
+}
+
+.navbar {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    padding: 15px 20px; /* Adjust padding for spacing */
+   
+    position: relative; /* Helps control positioning */
+}
+
+.icon {
+    display: flex;
+    flex-direction: column; /* Stack logo and text */
+    align-items: center; /* Center everything */
+    justify-content: center;
+    position: relative;
+    top: 10px; /* Adjust placement */
+    text-align: center;
+}
+
+.logo-text {
+    color: #eae733;
+    font-size: 22px; /* Adjust for balance */
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: -20px; /* Adjust spacing between logo and text */
+
+    /* Initial Glow */
+   
+
+    /* Glow Animation */
+    animation: glowEffect 1.5s infinite alternate;
+}
+
+/* Keyframes for Multi-Color Glow Effect */
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 5px #ffff66, 0 0 10px #ff9900, 0 0 15px #66ff66;
+    }
+    25% {
+        text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff6600, 0 0 30px #66ff99;
+    }
+    50% {
+        text-shadow: 0 0 15px #ffff99, 0 0 25px #ff3300, 0 0 35px #33ff66;
+    }
+    
+    
+}
+
+
+
+
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    position: relative;
+    padding-bottom: 5px; /* Space between logo and underline */
+}
+
+.logo-img {
+    width: 150px;  
+    height: 130px; 
+    border-radius: 50%; /* Keeps image circular */
+    object-fit: cover;
+    margin-top: 20px; /* Moves the image down */
+}
+
+
+/* Yellow underline */
+
+
+
+
+
+ /* Remove underline from clickable logo */
+ a {
+    text-decoration: none;
+}
+
+
+
+.menu {
+    flex-grow: 1;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #000604;
+    font-weight: bold;
+    transition: color 0.4s ease-in-out;
+}
+
+.menu ul li a:hover {
+    color: #ff7200;
+}
+.menu ul li a:hover, .dropdown:hover .dropbtn {
+    background: #575757;
+}
+
+.dropbtn {
+    position: relative;
+    padding-right: 15px;
+}
+
+.menu ul li a:hover, .dropdown:hover .dropbtn {
+    background: transparent;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: transparent; /* Fully Transparent */
+    min-width: 220px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    background: transparent; /* Only text background, not full dropdown */
+}
+
+.dropdown-content a:hover {
+    background: transparent; /* Slight hover effect */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.srch {
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+}
+
+.srch::placeholder {
+    color: #fff;
+}
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffeb3b; /* Soft Yellow Color */
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Shadow to add depth */
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    color: #fff;
+    font-size: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+    color: #000;
+    background: #fff;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+    
+   
+
+.content {
+    padding-top: 100px; /* Adjust the padding to create space */
+}
+/* Base Card Styling with Glow */
+.card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInZoom 0.6s ease-in-out;
+}
+
+/* Card Hover Enhancement */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 25px rgba(238, 230, 75, 0.922), 0 0 45px rgba(30, 249, 140, 0.867);
+}
+
+/* Icon Styling with Pulse Glow */
+.card i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #46e9f5;
+    animation: pulseGlowIcon 2s infinite;
+}
+
+/* Card Heading */
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    text-shadow: 0 0 5px rgba(255, 114, 0, 0.3);
+}
+
+/* Paragraph Text */
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Card Container Layout */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* Section Headings */
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 40px;
+    color: #76e956;
+    text-shadow: 0 0 10px rgba(90, 192, 236, 0.6);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Explore More Button with Glow */
+.explore-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff7200;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(255, 114, 0, 0.6);
+}
+    
+/* Button Hover Effects */
+.explore-btn:hover {
+    background-color: #fff;
+    color: #fad637;
+    box-shadow: 0 0 15px rgba(255, 114, 0, 0.8);
+}
+
+/* Glow Animation for Icons */
+@keyframes pulseGlowIcon {
+    0%, 100% {
+        text-shadow: 0 0 5px #2bc359, 0 0 10px #40efff;
+    }
+    50% {
+        text-shadow: 0 0 15px #e946cb, 0 0 25px #c2d554;
+    }
+}
+
+/* Entry Animations */
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.career-buttons {
+    display: flex;
+    gap: 70px; /* Increased gap between buttons */
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.career-btn {
+    padding: 20px 40px; /* Larger buttons */
+    font-size: 22px;     /* Bigger text */
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.career-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, #ff416c, #ff4b2b);
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.career-btn:hover::before {
+    left: 0;
+}
+
+.tech-btn {
+    background-color: #1976d2;
+}
+
+.nontech-btn {
+    background-color: #43a047;
+}
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0c000068;
+    min-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0);
+    z-index: 10;
+    text-align: left;
+    padding: 10px 0;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Ensure content doesn't overlap with the navbar */
+.content {
+    padding-top: 100px; /* Adjust the padding to create space */
+}
+
+
+.translate-btn {
+    position: absolute; /* Position the button */
+    top: 120px; /* Adjust vertical position */
+    right: 0; /* Align button to the right */
+    margin-right: 20px; /* Add margin from the right edge */
+    padding: 10px 20px;
+    background-color: #ff7200;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.translate-btn:hover {
+    background-color: #e66900;
+}
+
+.translate-box {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    margin-right: 20px;
+}
+
+.location-btn {
+    position: absolute; /* Position the button */
+    top: 60px; /* Adjust vertical position */
+    right: 0; /* Align button to the right */
+    margin-right: 20px; /* Add margin from the right edge */
+    padding: 10px 20px;
+    background-color: #00fffb73;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.location-btn:hover {
+    background-color: #e66900;
+}
+
+.location-box {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    margin-right: 20px;
+}
+#profile {
+    background: #fff;
+    padding: 30px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
+  }
+  
+  #profile h2 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  #profile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #profile ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    color: #444;
+    font-size: 16px;
+  }
+  
+  #profile ul li strong {
+    color: #555;
+    width: 150px;
+    display: inline-block;
+  }
+  
+  #profile h3 {
+    margin-top: 30px;
+    color: #444;
+    font-size: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
+  
+  #profile textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+  
+  #profile button {
+    margin-top: 12px;
+    padding: 10px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #profile button:hover {
+    background-color: #45a049;
+  }
+  .floating-career-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+  }
+  
+  .floating-career-btn:hover {
+    background: linear-gradient(135deg, #66BB6A, #388E3C);
+    transform: scale(1.05);
+  }
+ /* Style for the courses section */
+.content-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Styling for the container */
+.container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Button styling */
+#take-quiz-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#take-quiz-btn:hover {
+    background-color: #45a049;
+}
